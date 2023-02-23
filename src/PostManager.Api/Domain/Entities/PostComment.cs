@@ -1,21 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 using PostManager.Api.Domain.Common.Interfaces;
 using PostManager.Api.Domain.Common.Models;
 
-
 namespace PostManager.Api.Domain.Entities
 {
-    public class Post : Audit, IBaseUser
+    public class PostComment : Audit, IBaseUser
     {
         [Key]
         public int Id { get; set; }
         public string Text { get; set; }
-        public ICollection<PostContent>? PostContents { get; set; }
-        public ICollection<PostComment>? PostComments { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
     }

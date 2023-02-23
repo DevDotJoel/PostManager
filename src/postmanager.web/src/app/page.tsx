@@ -1,91 +1,126 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="row">
+        <div className="col col-sm-4 d-none d-sm-block  ">
+          <div className="card shadow rounded ">
+            <div className="card-body ">
+              <h3 className="card-title text-center">
+                <b>Profile</b>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div className="col col-sm-4">
+          <div className="row">
+            <div className="col">
+              <div className="card shadow">
+                <div className="card-body">
+                  <h3 className="card-title text-center">
+                    <b>Home</b>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row mt-5">
+            <div className="col">
+              <div className="card shadow">
+                <div className="card-body">
+                  <div className="row mt-3">
+                    <div className="col">
+                      <h5>joelFerreira</h5>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col">
+                      <h6>
+                        bro o meu dia no trabalho foi uma bela bosta , a cliente
+                        com quem falei queria só falar com o manager só pq disse
+                        que não havia em stock &#128512;
+                      </h6>
+                    </div>
+                  </div>
+                  <div className="row mt-5">
+                    <div className="col-4 ">
+                      <div>
+                        <button className="btn btn-outline-dark">
+                          <i className="fa-solid fa-heart"></i>
+                          {""}
+                        </button>
+                        <span className="ms-2">
+                          {" "}
+                          <b> 15</b>
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-4">
+                      <button className="btn btn-outline-dark">
+                        <i className="fa-solid fa-comment"></i>
+                      </button>
+                      <span className="ms-2">
+                        {" "}
+                        <b>230</b>
+                      </span>
+                    </div>
+                    <div className="col-4">
+                      <button className="btn btn-outline-dark">
+                        <i className="fa-solid fa-share"></i>
+                      </button>
+                      <span className="ms-2">
+                        {" "}
+                        <b>230</b>{" "}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row mt-5">
+            <div className="col">
+              <div className="card shadow">
+                <div className="card-body">
+                  <div className="row mt-3">
+                    <div className="col">
+                      <h5>joelFerreira</h5>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col">
+                      <h6>
+                        bro o meu dia no trabalho foi uma bela bosta , a cliente
+                        com quem falei queria só falar com o manager só pq disse
+                        que não havia em stock &#128512;
+                      </h6>
+                    </div>
+                  </div>
+                  <div className="row mt-5">
+                    <div className="col">
+                      <button className="btn btn-dark">Comentários</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col col-sm-4 d-none d-sm-block">
+          <div className="card shadow">
+            <div className="card-body">
+              <h3 className="card-title text-center">
+                <b>Trending</b>
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </>
+  );
 }

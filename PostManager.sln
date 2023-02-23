@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostManager.Api", "PostManager.Api\PostManager.Api.csproj", "{AF7320FF-2BD1-422E-A541-C049EFE349EC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5850D547-F896-47F4-BFB7-29C7DF915B1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostManager.Api", "src\PostManager.Api\PostManager.Api.csproj", "{0CAEBB16-8909-4B02-B35A-95B4FE323445}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,12 @@ Global
 		{AF7320FF-2BD1-422E-A541-C049EFE349EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF7320FF-2BD1-422E-A541-C049EFE349EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF7320FF-2BD1-422E-A541-C049EFE349EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CAEBB16-8909-4B02-B35A-95B4FE323445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CAEBB16-8909-4B02-B35A-95B4FE323445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CAEBB16-8909-4B02-B35A-95B4FE323445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CAEBB16-8909-4B02-B35A-95B4FE323445}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0CAEBB16-8909-4B02-B35A-95B4FE323445} = {5850D547-F896-47F4-BFB7-29C7DF915B1F}
 	EndGlobalSection
 EndGlobal
