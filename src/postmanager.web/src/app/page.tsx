@@ -50,7 +50,7 @@ export default function Home() {
                   <div className="row mt-5">
                     <div className="col-4 ">
                       <div>
-                        <button className="btn btn-outline-dark">
+                        <button className="btn btn-outline-success">
                           <i className="fa-solid fa-heart"></i>
                           {""}
                         </button>
@@ -61,7 +61,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="col-4">
-                      <button className="btn btn-outline-dark">
+                      <button className="btn btn-outline-success">
                         <i className="fa-solid fa-comment"></i>
                       </button>
                       <span className="ms-2">
@@ -70,7 +70,7 @@ export default function Home() {
                       </span>
                     </div>
                     <div className="col-4">
-                      <button className="btn btn-outline-dark">
+                      <button className="btn btn-outline-success">
                         <i className="fa-solid fa-share"></i>
                       </button>
                       <span className="ms-2">
@@ -103,7 +103,7 @@ export default function Home() {
                   </div>
                   <div className="row mt-5">
                     <div className="col">
-                      <button className="btn btn-dark">Comentários</button>
+                      <button className="btn btn-success">Comentários</button>
                     </div>
                   </div>
                 </div>
