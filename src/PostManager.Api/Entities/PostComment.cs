@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using PostManager.Api.Domain.Common.Interfaces;
-using PostManager.Api.Domain.Common.Models;
+using PostManager.Api.Common.Interfaces;
+using PostManager.Api.Common.Models;
 
-namespace PostManager.Api.Domain.Entities
+namespace PostManager.Api.Entities
 {
     public class PostComment : Audit, IBaseUser
     {

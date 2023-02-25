@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PostManager.Api.Domain.Common.Interfaces
+namespace PostManager.Api.Common.Interfaces
 {
     public interface IBaseUser
     {

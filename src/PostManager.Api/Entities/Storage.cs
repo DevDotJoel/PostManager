@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PostManager.Api.Domain.Entities
+namespace PostManager.Api.Entities
 {
     public class Storage
     {

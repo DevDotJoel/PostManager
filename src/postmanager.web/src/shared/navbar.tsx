@@ -3,7 +3,7 @@
 export function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow d-none d-sm-block ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-success bg-gradient shadow d-none d-sm-block ">
         <div className="container-fluid">
           <a className="navbar-brand text-dark" href="#">
             Navbar
@@ -66,16 +66,6 @@ export function Navbar() {
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link disabled"
-                  href="#"
-                  tabIndex={-1}
-                  aria-disabled="true"
-                >
-                  Disabled
-                </a>
               </li>
             </ul>
             <form className="d-flex">

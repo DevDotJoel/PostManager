@@ -50,33 +50,24 @@ export default function Home() {
                   <div className="row mt-5">
                     <div className="col-4 ">
                       <div>
-                        <button className="btn btn-outline-success">
+                        <button className="btn btn-outline-success bg-gradient">
                           <i className="fa-solid fa-heart"></i>
                           {""}
                         </button>
-                        <span className="ms-2">
-                          {" "}
-                          <b> 15</b>
-                        </span>
+                        <span className="ms-2"> 15</span>
                       </div>
                     </div>
                     <div className="col-4">
-                      <button className="btn btn-outline-success">
+                      <button className="btn btn-outline-success bg-gradient">
                         <i className="fa-solid fa-comment"></i>
                       </button>
-                      <span className="ms-2">
-                        {" "}
-                        <b>230</b>
-                      </span>
+                      <span className="ms-2"> 230</span>
                     </div>
                     <div className="col-4">
-                      <button className="btn btn-outline-success">
+                      <button className="btn btn-outline-success bg-gradient">
                         <i className="fa-solid fa-share"></i>
                       </button>
-                      <span className="ms-2">
-                        {" "}
-                        <b>230</b>{" "}
-                      </span>
+                      <span className="ms-2"> 230 </span>
                     </div>
                   </div>
                 </div>
@@ -103,7 +94,9 @@ export default function Home() {
                   </div>
                   <div className="row mt-5">
                     <div className="col">
-                      <button className="btn btn-success">Comentários</button>
+                      <button className="btn btn-success bg-gradient">
+                        Comentários
+                      </button>
                     </div>
                   </div>
                 </div>

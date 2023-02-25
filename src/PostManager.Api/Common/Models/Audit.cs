@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PostManager.Api.Domain.Common.Models
+namespace PostManager.Api.Common.Models
 {
     public class Audit
     {

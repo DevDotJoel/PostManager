@@ -5,36 +5,11 @@
 
   
 }
+
 .card{
   border-radius: 25px !important;
 }
-.bg-green{
-  background-color:#121212 !important;
-}
 
-.btn-success {
-  background-color: rgb(92, 201, 164) !important;
-  border: rgb(92, 201, 164) !important; 
-  /* color: #fff; */
-}
-.btn-outline-success {
-  color:rgb(92, 201, 164)!important;
-  border-color: rgb(92, 201, 164)!important;
-  /* color: #fff; */
-}
-.btn-outline-success:hover{
-  background-color: rgb(80, 175, 144) !important;
-  border-color:  rgb(80, 175, 144) !important;
-  color: white !important;
-}
-.btn-success:hover{
-  background-color: rgb(80, 175, 144) !important;
-  border:  rgb(80, 175, 144) !important;
-}
-.btn-outline-success:hover{
-  background-color: rgb(80, 175, 144) !important;
-  border-color:  rgb(80, 175, 144) !important;
-}
 .bg-gray{
   background-color: #d3d3d3;
 }
