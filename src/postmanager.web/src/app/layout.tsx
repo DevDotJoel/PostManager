@@ -25,7 +25,6 @@ export default function RootLayout({
         <Script
           src="https://kit.fontawesome.com/b7eb7b6f40.js"
           crossOrigin="anonymous"
-          strategy="beforeInteractive"
         />
         <Navbar />
         <main>
