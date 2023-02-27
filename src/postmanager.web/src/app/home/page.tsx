@@ -75,8 +75,8 @@ export default function HomePage() {
                     <div className="col">
                       <h6>
                         Estou em formação do tralho em ingles e a stora disse :
-                        "only when the instructions are... Direitinhas.. Can
-                        they be accepted" &#129315;
+                        only when the instructions are... Direitinhas.. Can they
+                        be accepted &#129315;
                       </h6>
                     </div>
                   </div>
