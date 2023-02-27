@@ -5,10 +5,10 @@ import Link from "next/link";
 export function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light bg-gradient shadow d-none d-sm-block ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light bg-gradient shadow sticky-top ">
         <div className="container">
           <Link className="navbar-brand text-dark" href="/">
-            Navbar
+            MyPost
           </Link>
           <button
             className="navbar-toggler"

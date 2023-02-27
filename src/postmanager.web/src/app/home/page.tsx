@@ -16,7 +16,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="row mt-5">
+          <div className="row mt-3">
             <div className="col">
               <div className="card shadow card-hover">
                 <div className="card-body">
@@ -61,21 +61,22 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="row mt-5">
+
+          <div className="row mt-3 ">
             <div className="col">
               <div className="card shadow card-hover">
                 <div className="card-body">
                   <div className="row mt-3">
                     <div className="col">
-                      <h5>joelFerreira</h5>
+                      <h5>SaraSilva</h5>
                     </div>
                   </div>
                   <div className="row">
                     <div className="col">
                       <h6>
-                        bro o meu dia no trabalho foi uma bela bosta , a cliente
-                        com quem falei queria só falar com o manager só pq disse
-                        que não havia em stock &#128512;
+                        Estou em formação do tralho em ingles e a stora disse :
+                        "only when the instructions are... Direitinhas.. Can
+                        they be accepted" &#129315;
                       </h6>
                     </div>
                   </div>
@@ -90,8 +91,33 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          <div className="row mt-5 ">
+            <div className="col">
+              <div className="card shadow card-hover">
+                <div className="card-body">
+                  <div className="row mt-3">
+                    <div className="col">
+                      <h5>HelenaVaz</h5>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col">
+                      <h6>Casa de BANHO FEITAA HUHUHU &#129315;</h6>
+                    </div>
+                  </div>
+                  <div className="row mt-5">
+                    <div className="col">
+                      <button className="btn btn-success bg-gradient">
+                        Comentários
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="col d-none d-sm-block">
+        <div className="col d-none d-md-block">
           <Trending />
         </div>
       </div>
