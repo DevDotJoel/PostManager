@@ -13,9 +13,9 @@ namespace PostManager.Api.Entities
         [Key]
         public int Id { get; set; }
         public string Text { get; set; }
-        public ICollection<PostContent>? PostContents { get; set; }
-        public ICollection<PostComment>? PostComments { get; set; }
+        public virtual ICollection<PostContent>? PostContents { get; set; }
+        public virtual ICollection<PostComment>? PostComments { get; set; }
         public int UserId { get; set; }
-        public User User { get; set; }
+        public virtual User? User { get; set; }
     }
 }

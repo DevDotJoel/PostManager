@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using PostManager.Api.Contracts;
 using PostManager.Api.Data;
 using PostManager.Api.Entities;
 using PostManager.Api.IdentityService;
+using PostManager.Api.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ITokenClaimService,TokenClaimService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddDbContext<PostManagerContext>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
 builder.Services.AddIdentity<User, Role>(options => options.SignIn.RequireConfirmedAccount = true).
     AddEntityFrameworkStores<PostManagerContext>()

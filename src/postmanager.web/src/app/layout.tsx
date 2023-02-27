@@ -28,7 +28,7 @@ export default function RootLayout({
         />
         <Navbar />
         <main>
-          <div className="container-fluid  d-flex flex-column vh-100">
+          <div className="container-fluid   d-flex flex-column min-vh-100">
             <div className="row  ">
               <div className="col col-sm-4 d-none d-lg-block ">
                 <SideMenu />

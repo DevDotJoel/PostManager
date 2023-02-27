@@ -8,8 +8,8 @@ namespace PostManager.Api.Entities
 {
     public class User : IdentityUser<int>
     {
-        public ICollection<Post>? Posts { get; set; }
-        public ICollection<PostComment>? Comments { get; set; }
+        public virtual ICollection<Post>? Posts { get; set; }
+        public virtual ICollection<PostComment>? Comments { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 

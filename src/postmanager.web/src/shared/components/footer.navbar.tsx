@@ -3,7 +3,7 @@ import Link from "next/link";
 export function FooterNavBar() {
   return (
     <>
-      <footer className="footer mt-auto py-3 bg-white fixed-bottom shadow d-sm-none">
+      <footer className="footer mt-auto py-2 bg-white fixed-bottom shadow d-sm-none">
         <div className="container-fluid">
           <div className="row">
             <div className="col">
@@ -22,8 +22,8 @@ export function FooterNavBar() {
               </Link>
             </div>
             <div className="col">
-              <Link href={"/profile"} className="btn btn-default  ">
-                <i className="fa-solid fa-user"></i>
+              <Link href={"/notification"} className="btn btn-default  ">
+                <i className="fa-solid fa-bell"></i>
               </Link>
             </div>
           </div>
