@@ -1,13 +1,13 @@
-export interface Post{
+export interface PostModel{
     id: number;
     text:string,
     totalLikes:number,
     totalComments:number,
-    author:Author,
+    author:AuthorModel,
     createdDate:string,
 
 }
 
-export interface Author{
+export interface AuthorModel{
     username:string;
 }
