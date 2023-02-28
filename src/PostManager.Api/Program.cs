@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;
@@ -7,7 +8,9 @@ using PostManager.Api.Contracts;
 using PostManager.Api.Data;
 using PostManager.Api.Entities;
 using PostManager.Api.IdentityService;
+using PostManager.Api.Mapper;
 using PostManager.Api.Services;
+using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +23,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ITokenClaimService,TokenClaimService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddAutoMapper((sp, cfg) => cfg.AddProfile(typeof(Profiles)), Array.Empty<Assembly>());
 builder.Services.AddDbContext<PostManagerContext>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
 builder.Services.AddIdentity<User, Role>(options => options.SignIn.RequireConfirmedAccount = true).
     AddEntityFrameworkStores<PostManagerContext>()

@@ -5,7 +5,7 @@ import { Trending } from "./trending";
 export default function Posts() {
   return (
     <>
-      <div className="row">
+      {/* <div className="row">
         <div className="col ">
           <div className="row">
             <div className="col">
@@ -157,7 +157,7 @@ export default function Posts() {
         <div className="col d-none d-md-block">
           <Trending />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

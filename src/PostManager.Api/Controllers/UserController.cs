@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,9 +14,11 @@ namespace PostManager.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly PostManagerContext _dbContext;
-        public UserController(PostManagerContext dbContext)
+        private readonly IMapper _mapper;
+        public UserController(PostManagerContext dbContext,IMapper mapper)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
         }
         [Authorize]
         [HttpPost]
@@ -33,7 +36,7 @@ namespace PostManager.Api.Controllers
             var user = await _dbContext.Users.Where(u => u.UserName== username).AsNoTracking().FirstOrDefaultAsync();
             if (user != null)
             {
-                var post= await _dbContext.Posts.Where(p=>p.Id== postId && p.UserId== user.Id).AsNoTracking().FirstOrDefaultAsync();
+                var post= _mapper.Map<PostDto>(await _dbContext.Posts.Where(p=>p.Id== postId && p.UserId== user.Id).Include(u=>u.User).AsNoTracking().FirstOrDefaultAsync());
 
                 return Ok(new { Data = post, Result = "success" });
 
