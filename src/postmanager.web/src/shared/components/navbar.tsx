@@ -2,7 +2,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 
 export function Navbar() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light bg-gradient shadow sticky-top ">

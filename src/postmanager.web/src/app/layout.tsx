@@ -8,7 +8,8 @@ import Script from "next/script";
 import { FooterNavBar } from "@/shared/components/footer.navbar";
 import { ReactNode } from "react";
 import { SessionProvider } from "next-auth/react";
-import { Navbar } from "@/shared/navbar";
+import { Navbar } from "@/shared/components/navbar";
+import { MainLayout } from "@/shared/components/main.layout";
 interface IProps {
   children: ReactNode;
   session: any;
@@ -24,19 +25,12 @@ export default function RootLayout({ children, session }: IProps) {
 
       <head />
       <body>
+        <Script
+          src="https://kit.fontawesome.com/b7eb7b6f40.js"
+          crossOrigin="anonymous"
+        />
         <SessionProvider session={session}>
-          <Script
-            src="https://kit.fontawesome.com/b7eb7b6f40.js"
-            crossOrigin="anonymous"
-          />
-          <Navbar />
-          <main>
-            <div className="container-fluid   d-flex flex-column min-vh-100">
-              {children}
-            </div>
-          </main>
-
-          <FooterNavBar />
+          <MainLayout>{children}</MainLayout>
         </SessionProvider>
       </body>
     </html>

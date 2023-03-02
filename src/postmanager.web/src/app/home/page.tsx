@@ -1,6 +1,7 @@
 import Post from "@/shared/components/post";
 import SideMenu from "@/shared/components/sidemenu";
 import { Trending } from "@/shared/components/trending";
+import { getCurrentUser } from "@/shared/session";
 import { getServerSession } from "next-auth";
 
 async function getData() {
@@ -17,7 +18,7 @@ async function getData() {
   return res.json();
 }
 async function getUser() {
-  const session = await getServerSession();
+  const session = await getCurrentUser();
   return session;
 }
 export default async function Page() {
