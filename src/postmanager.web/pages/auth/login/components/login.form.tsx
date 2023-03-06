@@ -1,5 +1,3 @@
-"use client";
-
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
@@ -24,7 +22,7 @@ export default function LoginForm() {
 
   return (
     <>
-      <div className="row d-flex justify-content-center">
+      <div className="row d-flex justify-content-center ">
         <div className="col col-sm-10 col-md-8 col-lg-6 col-xl-4">
           <div className="card shadow w-100">
             <div className="card-body">

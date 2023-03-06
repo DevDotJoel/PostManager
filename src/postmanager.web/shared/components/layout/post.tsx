@@ -1,6 +1,4 @@
-"use client";
-
-import { PostModel } from "@/models/post";
+import { PostModel } from "@/shared/models/post";
 import { useState } from "react";
 
 export default function Post({ data }: any) {

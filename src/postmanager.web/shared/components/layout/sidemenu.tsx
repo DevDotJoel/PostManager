@@ -1,5 +1,3 @@
-"use client";
-
 export default function SideMenu({ user }: any) {
   return (
     <>

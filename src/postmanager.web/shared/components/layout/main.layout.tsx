@@ -1,7 +1,6 @@
 import { getServerSession } from "next-auth";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { getCurrentUser, getSession } from "../session";
 import { FooterNavBar } from "./footer.navbar";
 import { Navbar } from "./navbar";
 
