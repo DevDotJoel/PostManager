@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PostManager.Domain.Aggregates.PostAggregate;
+using PostManager.Domain.Aggregates.PostAggregate.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,8 @@ namespace PostManager.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<Post> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+            builder.Property(x=>x.Id).HasConversion(v=>v.Value,src => PostId.Create(src)).ValueGeneratedNever();
         }
     }
 }

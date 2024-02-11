@@ -15,5 +15,11 @@ namespace PostManager.Infrastructure.Persistance
             
         }
         public DbSet<Post> Posts { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PostManagerDbContext).Assembly);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

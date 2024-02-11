@@ -1,6 +1,0 @@
-@PostManager.Api_HostAddress = http://localhost:5193
-
-GET {{PostManager.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
