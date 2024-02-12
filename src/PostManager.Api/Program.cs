@@ -1,9 +1,11 @@
 using PostManager.Api;
+using PostManager.Application;
 using PostManager.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
    .AddPresentation(builder.Configuration)
+   .AddApplication()
    .AddInfrastructure();
 
 

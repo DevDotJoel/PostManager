@@ -3,8 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PostManager.Application.Common.Contracts;
+using PostManager.Application.Common.Repositories;
 using PostManager.Infrastructure.Persistance;
 using PostManager.Infrastructure.Persistance.Identity;
+using PostManager.Infrastructure.Persistance.Repositories;
 
 namespace PostManager.Infrastructure
 {
@@ -14,6 +16,7 @@ namespace PostManager.Infrastructure
             )
         {
             services.AddDbContext<PostManagerDbContext>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+            services.AddScoped<IPostRepository, PostRepository>();
             AddAuthentication(services);
             return services;
         }

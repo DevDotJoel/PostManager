@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PostManager.Application\PostManager.Application.csproj" />
     <ProjectReference Include="..\PostManager.Contracts\PostManager.Contracts.csproj" />
     <ProjectReference Include="..\PostManager.Infrastructure\PostManager.Infrastructure.csproj" />
