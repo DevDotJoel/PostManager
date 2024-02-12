@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 using PostManager.Application.Common.Contracts;
 using PostManager.Application.Common.Models.Authentication;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PostManager.Application.Authentication.Commands.Login
 {
-    public class LoginCommandHandler : IRequestHandler<LoginCommand, AuthenticationResultModel>
+    public class LoginCommandHandler : IRequestHandler<LoginCommand,ErrorOr<AuthenticationResultModel>>
     {
         private readonly IIdentityService _identityService;
         public LoginCommandHandler(IIdentityService identityService)
@@ -17,7 +18,7 @@ namespace PostManager.Application.Authentication.Commands.Login
             _identityService = identityService;
             
         }
-        public async Task<AuthenticationResultModel> Handle(LoginCommand request, CancellationToken cancellationToken)
+        public async Task<ErrorOr<AuthenticationResultModel>> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
             var result= await _identityService.LoginJwt(request.Email,request.Password);
             return result;

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 using PostManager.Application.Common.Models.Post;
 using System;
 using System.Collections.Generic;
@@ -13,5 +14,5 @@ namespace PostManager.Application.Posts.Commands.CreatePost
         string Title,
         string Content    
      )
-        :IRequest<PostModel>;
+        : IRequest<ErrorOr<PostModel>>;
 }

@@ -44,7 +44,7 @@ namespace PostManager.Api
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.GetSection("securityKey").Value))
                 };
             });
-
+            services.AddProblemDetails();
             return services;
         }
     }

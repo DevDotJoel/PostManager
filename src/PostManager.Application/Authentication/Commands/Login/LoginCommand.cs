@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 using PostManager.Application.Common.Models.Authentication;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,5 @@ namespace PostManager.Application.Authentication.Commands.Login
     (
         string Email,
         string Password
-    ):IRequest<AuthenticationResultModel>;
+    ):IRequest<ErrorOr<AuthenticationResultModel>>;
 }

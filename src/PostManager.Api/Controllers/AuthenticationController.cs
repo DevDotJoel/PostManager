@@ -11,7 +11,7 @@ namespace PostManager.Api.Controllers
     [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthenticationController : ControllerBase
+    public class AuthenticationController : ApiController
     {
        private ISender _mediator;
 
