@@ -1,11 +1,10 @@
-﻿using PostManager.Domain.Common.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostManager.Domain.Common.ValueObjects
+namespace PostManager.Domain.Common.Models
 {
     public sealed class UserId : EntityId<Guid>
     {
