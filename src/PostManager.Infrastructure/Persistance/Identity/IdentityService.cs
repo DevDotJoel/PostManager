@@ -41,9 +41,9 @@ namespace PostManager.Infrastructure.Persistance.Identity
             var currentClaims = roleClaims.Select(r => r.Value).ToList();
             var token = _jwtHandler.GetToken(user.Email, user.Id.ToString(), currentClaims);
             var currentUser = new AuthUserModel(
-                 Id: user.Id.ToString(),
-                 Username: user.UserName,
-                 Email: user.Email
+                  user.Id.ToString(),
+                user.UserName,
+                  user.Email
 
             );
             var authResult = new AuthenticationResultModel(currentUser, token);
@@ -76,6 +76,7 @@ namespace PostManager.Infrastructure.Persistance.Identity
             var userStatus = await _userManager.CreateAsync(userToCreate, password);
             if(userStatus.Succeeded)
             {
+                await _userManager.AddToRoleAsync(userToCreate, "user");
                 return true;
             }
             else

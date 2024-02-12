@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PostManager.Infrastructure.Persistance;
 
@@ -11,9 +12,11 @@ using PostManager.Infrastructure.Persistance;
 namespace PostManager.Infrastructure.Migrations
 {
     [DbContext(typeof(PostManagerDbContext))]
-    partial class PostManagerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240212210213_Added1")]
+    partial class Added1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -6,6 +6,7 @@ using PostManager.Domain.Aggregates.PostAggregate;
 using PostManager.Infrastructure.Persistance.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,16 @@ namespace PostManager.Infrastructure.Persistance
             modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("UsersLogins");
             modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("RolesClaims");
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("UsersTokens");
+
+            modelBuilder.Entity<Role>().HasData(new Role
+            {
+
+                Name = "User",
+                NormalizedName = "USER",
+                Id = Guid.NewGuid(),
+                ConcurrencyStamp = Guid.NewGuid().ToString()
+,
+            });
         }
     }
 }

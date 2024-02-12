@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using MediatR;
+using PostManager.Application.Common.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,17 @@ using System.Threading.Tasks;
 
 namespace PostManager.Application.Authentication.Commands.Register
 {
-    public class RegisterCommandHandler:AbstractValidator<RegisterCommand>
+    public class RegisterCommandHandler : IRequestHandler<RegisterCommand>
     {
-        public RegisterCommandHandler()
+        private readonly IIdentityService _identityService;
+        public RegisterCommandHandler(IIdentityService identityService)
         {
-            RuleFor(r=>r.Email).NotEmpty().MinimumLength(7);
-            RuleFor(r => r.Username).NotEmpty().MinimumLength(7);
-            RuleFor(r => r.Password).NotEmpty().MinimumLength(7);
+            _identityService = identityService;
+            
+        }
+        public async Task Handle(RegisterCommand request, CancellationToken cancellationToken)
+        {
+          await _identityService.Register(request.Email,request.Username,request.Password);
         }
     }
 }

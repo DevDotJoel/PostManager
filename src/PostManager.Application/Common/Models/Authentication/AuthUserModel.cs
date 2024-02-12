@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PostManager.Application.Common.Models.Authentication
 {
-    public class AuthUserModel
+    public record AuthUserModel
     (
       string Id,
       string Username,
