@@ -3,8 +3,8 @@ using PostManager.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-   .AddPresentation()
-   .AddInfrastructure(builder.Configuration);
+   .AddPresentation(builder.Configuration)
+   .AddInfrastructure();
 
 
 var app = builder.Build();
@@ -16,7 +16,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
