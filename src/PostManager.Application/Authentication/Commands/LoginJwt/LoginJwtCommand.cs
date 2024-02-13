@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostManager.Application.Authentication.Commands.Login
+namespace PostManager.Application.Authentication.Commands.LoginJwt
 {
-    public record LoginCommand
+    public record LoginJwtCommand
     (
         string Email,
         string Password

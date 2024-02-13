@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PostManager.Application.Authentication.Commands.Login;
+using PostManager.Application.Authentication.Commands.LoginJwt;
 using PostManager.Application.Authentication.Commands.Register;
 using PostManager.Contracts.Requests.Authentication;
 
@@ -30,7 +30,7 @@ namespace PostManager.Api.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginUserRequest loginUserRequest)
         {
-            var command = new LoginCommand( loginUserRequest.Email, loginUserRequest.Password);            
+            var command = new LoginJwtCommand( loginUserRequest.Email, loginUserRequest.Password);            
             return Ok(await _mediator.Send(command));
         }
     }

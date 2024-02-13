@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostManager.Application.Authentication.Commands.Login
+namespace PostManager.Application.Authentication.Commands.LoginJwt
 {
-    public class LoginCommandValidator : AbstractValidator<LoginCommand>
+    public class LoginJwtCommandValidator : AbstractValidator<LoginJwtCommand>
     {
-        public LoginCommandValidator()
+        public LoginJwtCommandValidator()
         {
             RuleFor(r => r.Email).NotEmpty().MinimumLength(7);
             RuleFor(r => r.Password).NotEmpty().MinimumLength(7);
