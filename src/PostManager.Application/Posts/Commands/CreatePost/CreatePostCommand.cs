@@ -1,6 +1,7 @@
 ﻿using ErrorOr;
 using MediatR;
 using PostManager.Application.Common.Models.Post;
+using PostManager.Domain.Aggregates.PostAggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,5 @@ namespace PostManager.Application.Posts.Commands.CreatePost
         string Title,
         string Content    
      )
-        : IRequest<ErrorOr<PostModel>>;
+        : IRequest<ErrorOr<Post>>;
 }

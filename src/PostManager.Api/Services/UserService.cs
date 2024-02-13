@@ -19,7 +19,7 @@ namespace PostManager.Api.Services
 
         public Guid GetUserId()
         {
-            var userId = _httpContext.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var userId = _httpContext.HttpContext.User.FindFirst("UserId")?.Value;
             return Guid.Parse(userId);
         }
     }

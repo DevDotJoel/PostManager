@@ -34,7 +34,7 @@ namespace PostManager.Infrastructure.Persistance.Identity
             }
             var claims = new[]
               {
-                new Claim(JwtRegisteredClaimNames.Sub,userId.ToString()),
+                new Claim("UserId",userId),
                 new Claim(JwtRegisteredClaimNames.Email,email)
                 ,
             }.Union(userClaims).ToArray();
