@@ -4,9 +4,9 @@ using PostManager.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-   .AddPresentation(builder.Configuration)
+   .AddPresentation()
    .AddApplication()
-   .AddInfrastructure();
+   .AddInfrastructure(builder.Configuration);
 
 
 var app = builder.Build();
