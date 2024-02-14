@@ -26,23 +26,6 @@ namespace PostManager.Api
                            .WithOrigins("http://localhost:3000"));
 
             });
-            //services.AddAuthentication(opt =>
-            //{
-            //    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.TokenValidationParameters = new TokenValidationParameters
-            //    {
-            //        ValidateIssuer = true,
-            //        ValidateAudience = true,
-            //        ValidateLifetime = true,
-            //        ValidateIssuerSigningKey = true,
-            //        ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
-            //        ValidAudience = jwtSettings.GetSection("validAudience").Value,
-            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.GetSection("securityKey").Value))
-            //    };
-            //});
             services.AddProblemDetails();
             return services;
         }

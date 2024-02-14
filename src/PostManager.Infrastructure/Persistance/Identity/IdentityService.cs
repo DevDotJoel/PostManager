@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using ErrorOr;
+using Microsoft.AspNetCore.Identity;
 using PostManager.Application.Common.Contracts;
 using PostManager.Application.Common.Models.Authentication;
 using PostManager.Application.Common.Models.User;
@@ -24,10 +25,7 @@ namespace PostManager.Infrastructure.Persistance.Identity
             _jwtHandler = jwtHandler;
 
         }
-        public Task<UserModel> GetUserById(string id)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public async Task<AuthenticationResultModel> LoginJwt(string email, string password)
         {
@@ -83,6 +81,17 @@ namespace PostManager.Infrastructure.Persistance.Identity
             {
                 throw new Exception("An error occurred");
             }
+        }
+
+       public async Task<ErrorOr<AuthUserModel>> GetUserById(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if(user == null)
+            {
+                return Error.NotFound("User not found");
+            }
+
+            return new AuthUserModel(user.Id.ToString(),user.UserName,user.Email);
         }
     }
     }

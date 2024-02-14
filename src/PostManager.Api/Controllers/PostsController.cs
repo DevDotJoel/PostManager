@@ -8,11 +8,11 @@ using PostManager.Contracts.Requests.Post;
 namespace PostManager.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class PostController(ISender _mediator) : ApiController
+    public class PostsController(ISender _mediator) : ApiController
     {
 
         [HttpPost]
-        public async Task<IActionResult> CreatePost([FromBody] CreatePostRequest createPost)
+        public async Task<IActionResult> CreatePost( CreatePostRequest createPost)
         {
             var command = new CreatePostCommand(createPost.Title, createPost.Content);
             var result = await _mediator.Send(command);
