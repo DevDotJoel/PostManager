@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace PostManager.Application.Posts.Commands.CreatePost
 {
-    public record CreatePostCommand 
+    public record CreatePostCommand
     (
         string Title,
-        string Content    
+        string Content
      )
-        : IRequest<ErrorOr<Post>>;
+        : IRequest<ErrorOr<PostModel>>;
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PostManager.Application.Common.Models.Post
 {
-   public class PostModel
-    (
-        string Id,
-        string Title,
-        string Content
-    );
+    public record PostModel
+     (
+         string Id,
+         string Title,
+         string Content
+     );
 }
